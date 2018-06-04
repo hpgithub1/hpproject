@@ -8,6 +8,6 @@
          <setting name="mapUnderscoreToCamelCase" value="true"/>
      </settings>
      <typeAliases>
-         <package name="com.hp.websocket.model"/>
+         <package name="andy.model"/>
      </typeAliases>
  </configuration>
