@@ -65,6 +65,12 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+    <!-- jstl -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
 <!-- websocket依赖 -->
 <dependency>
             <groupId>javax.websocket</groupId>

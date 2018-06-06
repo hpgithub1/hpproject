@@ -1005,7 +1005,17 @@ if (typeof jQuery === 'undefined') {
       if (transition) {
         that.$element[0].offsetWidth // force reflow
       }
-
+      
+      that.$element.children().eq(0).css("position", "absolute").css({  
+          "margin": "0px",  
+          "top": function () {  
+              return (that.$element.height() - that.$element.children().eq(0).height() - 40) / 2 + "px";  
+          },  
+          "left": function () {  
+              return (that.$element.width() - that.$element.children().eq(0).width()) / 2 + "px";  
+          }  
+      });  
+      
       that.$element.addClass('in')
 
       that.enforceFocus()
@@ -1163,6 +1173,10 @@ if (typeof jQuery === 'undefined') {
       paddingLeft:  !this.bodyIsOverflowing && modalIsOverflowing ? this.scrollbarWidth : '',
       paddingRight: this.bodyIsOverflowing && !modalIsOverflowing ? this.scrollbarWidth : ''
     })
+ // 是弹出框居中。。。
+    var $modal_dialog = $(this.$element[0]).find('.modal-dialog');
+    var m_top = ( $(window).height() - $modal_dialog.height() )/2;
+    $modal_dialog.css({'margin': m_top + 'px auto'});
   }
 
   Modal.prototype.resetAdjustments = function () {

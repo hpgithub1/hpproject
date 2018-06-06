@@ -55,7 +55,7 @@
 		},function(data){
 			console.log(data);
 			if(data.code=="0"){
-				window.location.href='views/index.html';
+				window.location.href='main.jsp';
 			}
 			else{
 				alert("账号密码错误");
